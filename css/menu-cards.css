@@ -1,0 +1,126 @@
+/* 3D Menu Cards CSS */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.menu-card-container {
+  perspective: 1000px;
+  width: 100%;
+  height: 400px;
+}
+
+.menu-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+/* Mouse tracking tilt applies to the whole card element before click */
+.menu-card-container:not(.flipped) .menu-card {
+  /* JS will apply inline transform here for tilt */
+}
+
+.menu-card-container.flipped .menu-card {
+  transform: rotateY(180deg) !important; /* Force flip and override tilt */
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--bg-container);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.card-front {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-front h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--accent-neon);
+}
+
+.card-front .tagline {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-front .click-hint {
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: rgba(0, 245, 212, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  justify-content: flex-start;
+  text-align: left;
+  border-color: var(--accent-neon);
+  box-shadow: 0 0 20px rgba(0,245,212,0.15);
+}
+
+.card-back h4 {
+  font-size: 1.4rem;
+  color: var(--accent-neon);
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px dashed rgba(255,255,255,0.1);
+  padding-bottom: 0.3rem;
+}
+
+.spec-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.spec-val {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.price-tag {
+  margin-top: auto;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin: 4rem 0 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--glass-border);
+}

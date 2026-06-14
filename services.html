@@ -3,28 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Cashpanos</title>
-    <meta name="description" content="Explore our premium fintech services and product tiers.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Interactive Menu | Cashpanos</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu-cards.css">
 </head>
 <body>
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+
     <header>
         <a href="index.html" class="logo-container">
             <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 5L90 25V75L50 95L10 75V25L50 5Z" stroke="url(#paint0_linear)" stroke-width="4" stroke-linejoin="round"/>
-                <path d="M50 30L70 40V60L50 70L30 60V40L50 30Z" fill="url(#paint1_linear)"/>
+                <circle cx="50" cy="50" r="40" stroke="url(#paint0_linear)" stroke-width="4"/>
+                <path d="M40 30 V70 M60 30 V70" stroke="url(#paint1_linear)" stroke-width="4" stroke-linecap="round"/>
                 <defs>
-                    <linearGradient id="paint0_linear" x1="10" y1="5" x2="90" y2="95" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#00FF87"/>
-                        <stop offset="1" stop-color="#00E5FF"/>
-                    </linearGradient>
-                    <linearGradient id="paint1_linear" x1="30" y1="30" x2="70" y2="70" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#00FF87"/>
-                        <stop offset="1" stop-color="#00E5FF"/>
-                    </linearGradient>
+                    <linearGradient id="paint0_linear" x1="10" y1="10" x2="90" y2="90" gradientUnits="userSpaceOnUse"><stop stop-color="#00F5D4"/><stop offset="1" stop-color="#00FF87"/></linearGradient>
+                    <linearGradient id="paint1_linear" x1="40" y1="30" x2="60" y2="70" gradientUnits="userSpaceOnUse"><stop stop-color="#00F5D4"/><stop offset="1" stop-color="#00FF87"/></linearGradient>
                 </defs>
             </svg>
             <span class="logo-text">Cashpanos</span>
@@ -32,69 +26,109 @@
         <nav>
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="services.html" class="active">Interactive Menu</a></li>
+                <li><a href="contact.html">Reservations</a></li>
             </ul>
         </nav>
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
-            ☰
-        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
     </header>
 
     <main>
-        <section>
-            <h1>Our <span class="highlight">Products</span></h1>
-            <p>Select the perfect tier for your enterprise. Each plan scales seamlessly as your assets grow.</p>
-            
-            <div class="card-grid">
-                <div class="card">
-                    <h3>Starter</h3>
-                    <div class="price">$499<span>/mo</span></div>
-                    <ul class="features">
-                        <li>Basic Asset Management</li>
-                        <li>Standard API Access</li>
-                        <li>Email Support</li>
-                        <li>99.9% Uptime SLA</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Get Started</a>
-                </div>
-                <div class="card" style="border-color: var(--accent-teal);">
-                    <h3>Professional</h3>
-                    <div class="price">$1,299<span>/mo</span></div>
-                    <ul class="features">
-                        <li>Advanced Analytics</li>
-                        <li>High-Frequency API</li>
-                        <li>Priority 24/7 Support</li>
-                        <li>Custom Webhooks</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-glow" style="width: 100%; margin-top: 1rem;">Go Pro</a>
-                </div>
-                <div class="card">
-                    <h3>Enterprise</h3>
-                    <div class="price">Custom</div>
-                    <ul class="features">
-                        <li>Dedicated Infrastructure</li>
-                        <li>On-Premise Deployment</li>
-                        <li>Dedicated Account Manager</li>
-                        <li>Custom Integrations</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Contact Sales</a>
+        <section class="fade-in" style="padding-top: 6rem;">
+            <h1 style="text-align: center; font-size: 3rem;">The <span class="highlight">Menu</span></h1>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Hover to interact. Click cards to reveal details.</p>
+
+            <!-- Gourmet Meals -->
+            <h2 class="section-title">Gourmet Meals</h2>
+            <div class="menu-grid">
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <!-- Front -->
+                        <div class="card-face card-front">
+                            <h3>Wagyu Filet Mignon</h3>
+                            <p class="tagline">A5 Japanese Wagyu, Truffle Butter</p>
+                            <span class="click-hint">Click for Specs ➔</span>
+                        </div>
+                        <!-- Back -->
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Wagyu, Truffle, Garlic</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy</span></div>
+                            <div class="price-tag">$125.00</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Smash Burgers -->
+            <h2 class="section-title">Smash Burgers</h2>
+            <div class="menu-grid">
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <h3>Double Neon Smash</h3>
+                            <p class="tagline">Double Patty, Aged Cheddar, Secret Sauce</p>
+                            <span class="click-hint">Click for Specs ➔</span>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Beef, Cheese, Brioche</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">10 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy</span></div>
+                            <div class="price-tag">$24.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artisanal Starters -->
+            <h2 class="section-title">Artisanal Starters</h2>
+            <div class="menu-grid">
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <h3>Truffle Fries</h3>
+                            <p class="tagline">Hand-cut, White Truffle Oil, Parmesan</p>
+                            <span class="click-hint">Click for Specs ➔</span>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Potatoes, Truffle, Cheese</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">8 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy</span></div>
+                            <div class="price-tag">$18.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luxury Sweets -->
+            <h2 class="section-title">Luxury Sweets</h2>
+            <div class="menu-grid">
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <h3>24k Gold Lava Cake</h3>
+                            <p class="tagline">Dark Chocolate, Edible Gold, Raspberry</p>
+                            <span class="click-hint">Click for Specs ➔</span>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Chocolate, Gold, Berries</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">20 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Gluten</span></div>
+                            <div class="price-tag">$45.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Cashpanos. All rights reserved.</p>
-    </footer>
-
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('nav-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
+    <script src="js/main.js"></script>
+    <script src="js/flip-card.js"></script>
 </body>
 </html>

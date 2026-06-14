@@ -3,28 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Cashpanos</title>
-    <meta name="description" content="Learn about Cashpanos, our mission, and our cutting-edge technology.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Our Story | Cashpanos</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+
     <header>
         <a href="index.html" class="logo-container">
             <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 5L90 25V75L50 95L10 75V25L50 5Z" stroke="url(#paint0_linear)" stroke-width="4" stroke-linejoin="round"/>
-                <path d="M50 30L70 40V60L50 70L30 60V40L50 30Z" fill="url(#paint1_linear)"/>
+                <circle cx="50" cy="50" r="40" stroke="url(#paint0_linear)" stroke-width="4"/>
+                <path d="M40 30 V70 M60 30 V70" stroke="url(#paint1_linear)" stroke-width="4" stroke-linecap="round"/>
                 <defs>
-                    <linearGradient id="paint0_linear" x1="10" y1="5" x2="90" y2="95" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#00FF87"/>
-                        <stop offset="1" stop-color="#00E5FF"/>
-                    </linearGradient>
-                    <linearGradient id="paint1_linear" x1="30" y1="30" x2="70" y2="70" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#00FF87"/>
-                        <stop offset="1" stop-color="#00E5FF"/>
-                    </linearGradient>
+                    <linearGradient id="paint0_linear" x1="10" y1="10" x2="90" y2="90" gradientUnits="userSpaceOnUse"><stop stop-color="#00F5D4"/><stop offset="1" stop-color="#00FF87"/></linearGradient>
+                    <linearGradient id="paint1_linear" x1="40" y1="30" x2="60" y2="70" gradientUnits="userSpaceOnUse"><stop stop-color="#00F5D4"/><stop offset="1" stop-color="#00FF87"/></linearGradient>
                 </defs>
             </svg>
             <span class="logo-text">Cashpanos</span>
@@ -32,51 +25,29 @@
         <nav>
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html" class="active">Our Story</a></li>
+                <li><a href="services.html">Interactive Menu</a></li>
+                <li><a href="contact.html">Reservations</a></li>
             </ul>
         </nav>
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
-            ☰
-        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">☰</button>
     </header>
 
     <main>
-        <section>
-            <h1>Redefining <span class="highlight">Finance</span></h1>
-            <p>At Cashpanos, we believe the future of finance is built on speed, design, and uncompromised security. Our elite team of engineers and designers craft premium fintech assets for visionary companies.</p>
-            
-            <div class="card-grid" style="margin-top: 5rem;">
-                <div class="card">
-                    <div class="card-icon">⚡</div>
-                    <h3>Ultra-Fast Execution</h3>
-                    <p>Our platforms are optimized for millisecond response times, ensuring your assets are always liquid and ready to move.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🔒</div>
-                    <h3>Bank-Grade Security</h3>
-                    <p>We deploy military-grade encryption and secure infrastructure so you can sleep soundly knowing your assets are safe.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">✨</div>
-                    <h3>Premium Design</h3>
-                    <p>Form meets function. Our dark-mode UI with fluid animations provides a luxury experience on any device.</p>
-                </div>
+        <section class="fade-in" style="padding-top: 8rem;">
+            <h1>Our <span class="highlight">Vision</span></h1>
+            <div style="margin-top: 3rem; background: var(--bg-container); border: 1px solid var(--glass-border); padding: 3rem; border-radius: 16px;">
+                <h2 style="color: var(--accent-neon); margin-bottom: 1.5rem;">Where Precision Meets Passion</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1rem;">
+                    Cashpanos was founded on a simple principle: culinary arts deserve to be presented with the same luxury, precision, and technological sophistication as high-end fintech platforms. 
+                </p>
+                <p style="color: var(--text-muted); font-size: 1.1rem;">
+                    Our executive chefs collaborate with master designers to bring you a digital tasting menu. Every dish is a carefully architected experience, combining the finest ingredients with breathtaking presentation.
+                </p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Cashpanos. All rights reserved.</p>
-    </footer>
-
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('nav-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cashpanos | Premium Fintech Assets</title>
-    <meta name="description" content="Cashpanos is an ultra-fast, premium platform for managing fintech assets securely and with style.">
+    <title>Cashpanos | Premium Culinary Showcase</title>
+    <meta name="description" content="Experience a breathtaking, luxury culinary journey with Cashpanos.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Ambient Blobs -->
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+
     <header>
         <a href="index.html" class="logo-container">
             <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 5L90 25V75L50 95L10 75V25L50 5Z" stroke="url(#paint0_linear)" stroke-width="4" stroke-linejoin="round"/>
-                <path d="M50 30L70 40V60L50 70L30 60V40L50 30Z" fill="url(#paint1_linear)"/>
+                <!-- Culinary-inspired minimalist plate and fork/knife abstract -->
+                <circle cx="50" cy="50" r="40" stroke="url(#paint0_linear)" stroke-width="4"/>
+                <path d="M40 30 V70 M60 30 V70" stroke="url(#paint1_linear)" stroke-width="4" stroke-linecap="round"/>
                 <defs>
-                    <linearGradient id="paint0_linear" x1="10" y1="5" x2="90" y2="95" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#00FF87"/>
-                        <stop offset="1" stop-color="#00E5FF"/>
+                    <linearGradient id="paint0_linear" x1="10" y1="10" x2="90" y2="90" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00F5D4"/>
+                        <stop offset="1" stop-color="#00FF87"/>
                     </linearGradient>
-                    <linearGradient id="paint1_linear" x1="30" y1="30" x2="70" y2="70" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#00FF87"/>
-                        <stop offset="1" stop-color="#00E5FF"/>
+                    <linearGradient id="paint1_linear" x1="40" y1="30" x2="60" y2="70" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00F5D4"/>
+                        <stop offset="1" stop-color="#00FF87"/>
                     </linearGradient>
                 </defs>
             </svg>
@@ -32,37 +37,27 @@
         <nav>
             <ul id="nav-menu">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="services.html">Interactive Menu</a></li>
+                <li><a href="contact.html">Reservations</a></li>
             </ul>
         </nav>
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
-            ☰
-        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">☰</button>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Next-Gen <span class="highlight">Fintech Assets</span><br>For Modern Innovators</h1>
-            <p>Experience ultra-fast execution, seamless integration, and bank-grade security wrapped in a premium, responsive interface tailored for the future of finance.</p>
-            <div class="btn-group">
-                <a href="services.html" class="btn btn-glow">Explore Products</a>
-                <a href="contact.html" class="btn btn-primary">Contact Sales</a>
+        <section class="hero fade-in">
+            <h1>The Future of <span class="highlight">Gourmet Dining</span></h1>
+            <p style="margin: 1.5rem 0 2.5rem; font-size: 1.2rem; max-width: 600px; color: var(--text-muted);">
+                Indulge in a premium culinary showcase where art meets flavor. Discover our masterpiece creations right here, presented through an ultra-fast, luxury digital experience.
+            </p>
+            <div>
+                <a href="services.html" class="btn btn-glow">View Menu</a>
+                <a href="contact.html" class="btn" style="color: var(--text-main); margin-left: 1rem; border: 1px solid var(--glass-border);">Reserve a Table</a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Cashpanos. All rights reserved.</p>
-    </footer>
-
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('nav-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
