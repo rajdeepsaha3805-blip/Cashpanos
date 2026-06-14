@@ -4,22 +4,30 @@ document.addEventListener('DOMContentLoaded', () => {
     containers.forEach(container => {
         const card = container.querySelector('.menu-card');
 
+        let ticking = false;
+
         // Mouse tracking tilt effect
         container.addEventListener('mousemove', (e) => {
             if (container.classList.contains('flipped')) return; // disable tilt if flipped
             
-            const rect = container.getBoundingClientRect();
-            const x = e.clientX - rect.left; // x position within the element.
-            const y = e.clientY - rect.top;  // y position within the element.
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            // Calculate rotation (max 15 degrees)
-            const rotateX = ((y - centerY) / centerY) * -15;
-            const rotateY = ((x - centerX) / centerX) * 15;
-            
-            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const rect = container.getBoundingClientRect();
+                    const x = e.clientX - rect.left; // x position within the element.
+                    const y = e.clientY - rect.top;  // y position within the element.
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    // Calculate rotation (max 15 degrees)
+                    const rotateX = ((y - centerY) / centerY) * -15;
+                    const rotateY = ((x - centerX) / centerX) * 15;
+                    
+                    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                    ticking = false;
+                });
+                ticking = true;
+            }
         });
 
         // Reset rotation on mouse leave
