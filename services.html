@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Cashpanos</title>
+    <meta name="description" content="Explore our premium fintech services and product tiers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-container">
+            <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 5L90 25V75L50 95L10 75V25L50 5Z" stroke="url(#paint0_linear)" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M50 30L70 40V60L50 70L30 60V40L50 30Z" fill="url(#paint1_linear)"/>
+                <defs>
+                    <linearGradient id="paint0_linear" x1="10" y1="5" x2="90" y2="95" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00FF87"/>
+                        <stop offset="1" stop-color="#00E5FF"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear" x1="30" y1="30" x2="70" y2="70" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00FF87"/>
+                        <stop offset="1" stop-color="#00E5FF"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span class="logo-text">Cashpanos</span>
+        </a>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+            ☰
+        </button>
+    </header>
+
+    <main>
+        <section>
+            <h1>Our <span class="highlight">Products</span></h1>
+            <p>Select the perfect tier for your enterprise. Each plan scales seamlessly as your assets grow.</p>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Starter</h3>
+                    <div class="price">$499<span>/mo</span></div>
+                    <ul class="features">
+                        <li>Basic Asset Management</li>
+                        <li>Standard API Access</li>
+                        <li>Email Support</li>
+                        <li>99.9% Uptime SLA</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Get Started</a>
+                </div>
+                <div class="card" style="border-color: var(--accent-teal);">
+                    <h3>Professional</h3>
+                    <div class="price">$1,299<span>/mo</span></div>
+                    <ul class="features">
+                        <li>Advanced Analytics</li>
+                        <li>High-Frequency API</li>
+                        <li>Priority 24/7 Support</li>
+                        <li>Custom Webhooks</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-glow" style="width: 100%; margin-top: 1rem;">Go Pro</a>
+                </div>
+                <div class="card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <ul class="features">
+                        <li>Dedicated Infrastructure</li>
+                        <li>On-Premise Deployment</li>
+                        <li>Dedicated Account Manager</li>
+                        <li>Custom Integrations</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cashpanos. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('nav-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
