@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu-cards.css">
 </head>
 <body>
     <!-- Ambient Blobs -->
@@ -18,7 +19,6 @@
     <header>
         <a href="index.html" class="logo-container">
             <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Culinary-inspired minimalist plate and fork/knife abstract -->
                 <circle cx="50" cy="50" r="40" stroke="url(#paint0_linear)" stroke-width="4"/>
                 <path d="M40 30 V70 M60 30 V70" stroke="url(#paint1_linear)" stroke-width="4" stroke-linecap="round"/>
                 <defs>
@@ -46,18 +46,159 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero fade-in">
-            <h1>The Future of <span class="highlight">Gourmet Dining</span></h1>
-            <p style="margin: 1.5rem 0 2.5rem; font-size: 1.2rem; max-width: 600px; color: var(--text-muted);">
-                Indulge in a premium culinary showcase where art meets flavor. Discover our masterpiece creations right here, presented through an ultra-fast, luxury digital experience.
+            <h1 style="font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 1rem;">
+                The Future of <br>
+                <span class="typing-container highlight" id="typing-text">Gourmet Dining</span>
+            </h1>
+            <p style="margin: 1.5rem 0 3rem; font-size: 1.25rem; max-width: 600px; color: var(--text-muted);">
+                Indulge in a premium culinary showcase where art meets flavor. Experience masterpiece creations through an ultra-fast, luxury digital environment.
             </p>
-            <div>
-                <a href="services.html" class="btn btn-glow">View Menu</a>
-                <a href="contact.html" class="btn" style="color: var(--text-main); margin-left: 1rem; border: 1px solid var(--glass-border);">Reserve a Table</a>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="services.html" class="btn btn-glow">Explore The Menu</a>
+                <a href="contact.html" class="btn" style="color: var(--text-main); border: 2px solid var(--glass-border); transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent-neon)'" onmouseout="this.style.borderColor='var(--glass-border)'">Book a Table</a>
             </div>
+        </section>
+
+        <!-- Stats Banner -->
+        <div class="stats-banner fade-in delay-1">
+            <div class="stat-item">
+                <h3>3 Michelin</h3>
+                <p>Star Executive Chefs</p>
+            </div>
+            <div class="stat-item">
+                <h3>24</h3>
+                <p>Signature Dishes</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Locally Sourced</p>
+            </div>
+        </div>
+
+        <!-- Chef's Specials -->
+        <section class="fade-in">
+            <h2 class="section-title" style="text-align: center; border: none; margin-bottom: 1rem;">Chef's <span class="highlight">Specials</span></h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem;">Hover to interact. Click cards to reveal details.</p>
+            
+            <div class="menu-grid">
+                <!-- Special 1 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/steak?lock=1" alt="Wagyu Filet" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Wagyu Filet Mignon</h3>
+                                <p class="tagline">A5 Japanese Wagyu, Truffle Butter</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Wagyu, Truffle, Garlic</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy</span></div>
+                            <div class="price-tag">$125.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Special 2 -->
+                <div class="menu-card-container fade-in delay-1">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burger?lock=12" alt="Wagyu Smash" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>The Billionaire Smash</h3>
+                                <p class="tagline">Wagyu Blend, Foie Gras, Gold Flake</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Wagyu, Foie Gras, Gold</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy</span></div>
+                            <div class="price-tag">$55.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Special 3 -->
+                <div class="menu-card-container fade-in delay-2">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/cake,chocolate?lock=19" alt="Gold Lava" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>24k Gold Lava Cake</h3>
+                                <p class="tagline">Dark Chocolate, Edible Gold, Raspberry</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Chocolate, Gold, Berries</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">20 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Gluten</span></div>
+                            <div class="price-tag">$45.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="services.html" class="btn" style="color: var(--accent-neon); border-bottom: 2px solid var(--accent-neon); border-radius: 0; padding: 0.5rem 1rem;">View Full Menu</a>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="fade-in" style="background: rgba(24, 20, 14, 0.5); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+            <h2 class="section-title" style="text-align: center; border: none; margin-top: 0;">What They <span class="highlight">Say</span></h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The Wagyu Filet literally melted in my mouth. A transcendental culinary experience.</p>
+                    <div class="testimonial-author">
+                        <img src="https://loremflickr.com/100/100/portrait?lock=1" alt="Reviewer" class="author-img">
+                        <div class="author-info">
+                            <h4>Elena Rostova</h4>
+                            <p>Food Critic, NYC</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in delay-1">
+                    <p class="testimonial-text">I've eaten all over the world, but the Billionaire Smash is the greatest burger ever crafted.</p>
+                    <div class="testimonial-author">
+                        <img src="https://loremflickr.com/100/100/portrait?lock=2" alt="Reviewer" class="author-img">
+                        <div class="author-info">
+                            <h4>Marcus Sterling</h4>
+                            <p>Executive Chef</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in delay-2">
+                    <p class="testimonial-text">Cashpanos sets a new standard for luxury dining. The ambiance and flavors are unmatched.</p>
+                    <div class="testimonial-author">
+                        <img src="https://loremflickr.com/100/100/portrait?lock=3" alt="Reviewer" class="author-img">
+                        <div class="author-info">
+                            <h4>Sarah Jenkins</h4>
+                            <p>Lifestyle Magazine</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="fade-in" style="text-align: center; padding: 8rem 5%;">
+            <h2 style="font-size: 3rem; margin-bottom: 1rem;">Ready for an <span class="highlight">Unforgettable</span> Evening?</h2>
+            <p style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 3rem;">Tables are limited. Secure your reservation today.</p>
+            <a href="contact.html" class="btn btn-glow" style="padding: 1.5rem 4rem; font-size: 1.2rem;">Book Your Experience</a>
         </section>
     </main>
 
+    <footer style="text-align: center; padding: 3rem; border-top: 1px solid var(--glass-border); color: var(--text-muted);">
+        <p>&copy; 2026 Cashpanos. Premium Culinary Assets.</p>
+    </footer>
+
     <script src="js/main.js"></script>
+    <script src="js/flip-card.js"></script>
 </body>
 </html>

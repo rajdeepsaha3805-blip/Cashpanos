@@ -1,8 +1,9 @@
 @echo off
-echo Deploying Cashpanos Culinary Update...
+echo Deploying Cashpanos Landing Page Update...
+git checkout -b cashpanos
 git add .
-git commit -m "feat: Upgrade Cashpanos to premium culinary showcase with 3D menus"
-git push -u origin main
+git commit -m "feat: Overhaul landing page with immersive animations and testimonials"
+git push -u origin cashpanos
 echo.
 echo Deployment attempt finished. If you saw a 403 error, please authenticate your Git credentials.
 pause
