@@ -17,8 +17,8 @@
                 <circle cx="50" cy="50" r="40" stroke="url(#paint0_linear)" stroke-width="4"/>
                 <path d="M40 30 V70 M60 30 V70" stroke="url(#paint1_linear)" stroke-width="4" stroke-linecap="round"/>
                 <defs>
-                    <linearGradient id="paint0_linear" x1="10" y1="10" x2="90" y2="90" gradientUnits="userSpaceOnUse"><stop stop-color="#00F5D4"/><stop offset="1" stop-color="#00FF87"/></linearGradient>
-                    <linearGradient id="paint1_linear" x1="40" y1="30" x2="60" y2="70" gradientUnits="userSpaceOnUse"><stop stop-color="#00F5D4"/><stop offset="1" stop-color="#00FF87"/></linearGradient>
+                    <linearGradient id="paint0_linear" x1="10" y1="10" x2="90" y2="90" gradientUnits="userSpaceOnUse"><stop stop-color="#FF6B00"/><stop offset="1" stop-color="#FFB800"/></linearGradient>
+                    <linearGradient id="paint1_linear" x1="40" y1="30" x2="60" y2="70" gradientUnits="userSpaceOnUse"><stop stop-color="#FF6B00"/><stop offset="1" stop-color="#FFB800"/></linearGradient>
                 </defs>
             </svg>
             <span class="logo-text">Cashpanos</span>
@@ -39,18 +39,20 @@
             <h1 style="text-align: center; font-size: 3rem;">The <span class="highlight">Menu</span></h1>
             <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Hover to interact. Click cards to reveal details.</p>
 
-            <!-- Gourmet Meals -->
+            <!-- Gourmet Meals (6 items) -->
             <h2 class="section-title">Gourmet Meals</h2>
             <div class="menu-grid">
+                <!-- Item 1 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
-                        <!-- Front -->
                         <div class="card-face card-front">
-                            <h3>Wagyu Filet Mignon</h3>
-                            <p class="tagline">A5 Japanese Wagyu, Truffle Butter</p>
-                            <span class="click-hint">Click for Specs ➔</span>
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FF6B00?text=Wagyu+A5" alt="Wagyu Filet" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Wagyu Filet Mignon</h3>
+                                <p class="tagline">A5 Japanese Wagyu, Truffle Butter</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
                         </div>
-                        <!-- Back -->
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Wagyu, Truffle, Garlic</span></div>
@@ -60,38 +62,246 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Smash Burgers -->
-            <h2 class="section-title">Smash Burgers</h2>
-            <div class="menu-grid">
+                <!-- Item 2 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <h3>Double Neon Smash</h3>
-                            <p class="tagline">Double Patty, Aged Cheddar, Secret Sauce</p>
-                            <span class="click-hint">Click for Specs ➔</span>
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FFB800?text=Lobster+Tail" alt="Lobster" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Butter Poached Lobster</h3>
+                                <p class="tagline">Maine Lobster, Saffron Risotto</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Lobster, Saffron, Rice</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">20 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Shellfish, Dairy</span></div>
+                            <div class="price-tag">$85.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FF6B00?text=Duck+Confit" alt="Duck" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Crispy Duck Confit</h3>
+                                <p class="tagline">Cherry Reduction, Parsnip Purée</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Duck, Cherry, Parsnip</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">25 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">None</span></div>
+                            <div class="price-tag">$65.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FFB800?text=Seared+Scallops" alt="Scallops" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Seared Diver Scallops</h3>
+                                <p class="tagline">Cauliflower Silk, Caviar</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Scallops, Caviar, Cauliflower</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">12 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Shellfish</span></div>
+                            <div class="price-tag">$55.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FF6B00?text=Lamb+Rack" alt="Lamb" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Herb-Crusted Lamb</h3>
+                                <p class="tagline">Pistachio Crust, Mint Demi-Glace</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Lamb, Pistachio, Mint</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">30 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Nuts</span></div>
+                            <div class="price-tag">$75.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FFB800?text=Truffle+Pasta" alt="Pasta" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Black Truffle Linguine</h3>
+                                <p class="tagline">Handmade Pasta, Shaved Perigord Truffle</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Flour, Truffle, Butter</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy</span></div>
+                            <div class="price-tag">$50.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signature Smash Burgers (6 items) -->
+            <h2 class="section-title">Signature Smash Burgers</h2>
+            <div class="menu-grid">
+                <!-- Item 7 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FF6B00?text=Classic+Smash" alt="Classic Smash" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>The Classic Smash</h3>
+                                <p class="tagline">Double Patty, American Cheese, House Sauce</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Beef, Cheese, Brioche</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">10 Mins</span></div>
                             <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy</span></div>
+                            <div class="price-tag">$18.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 8 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FFB800?text=Truffle+Burger" alt="Truffle Burger" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Truffle Mushroom Smash</h3>
+                                <p class="tagline">Swiss Cheese, Roasted Mushrooms, Truffle Aioli</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Beef, Mushroom, Swiss</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">12 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy, Egg</span></div>
+                            <div class="price-tag">$22.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 9 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FF6B00?text=Spicy+Smash" alt="Spicy Smash" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Inferno Smash</h3>
+                                <p class="tagline">Pepper Jack, Jalapeño Jam, Spicy Mayo</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Beef, Jalapeño, Jack Cheese</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">10 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy</span></div>
+                            <div class="price-tag">$20.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 10 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FFB800?text=Bacon+BBQ" alt="BBQ Burger" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Bacon Bourbon BBQ</h3>
+                                <p class="tagline">Thick Bacon, Onion Rings, Bourbon BBQ</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Beef, Bacon, Onion, BBQ</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy</span></div>
                             <div class="price-tag">$24.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 11 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FF6B00?text=Vegan+Smash" alt="Vegan Smash" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Beyond Neon Smash</h3>
+                                <p class="tagline">Plant-Based Patty, Vegan Cheese, Avocado</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Beyond Meat, Avocado</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">10 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Soy</span></div>
+                            <div class="price-tag">$21.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 12 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FFB800?text=Wagyu+Smash" alt="Wagyu Smash" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>The Billionaire Smash</h3>
+                                <p class="tagline">Wagyu Blend, Foie Gras, Gold Flake</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Wagyu, Foie Gras, Gold</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy</span></div>
+                            <div class="price-tag">$55.00</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Artisanal Starters -->
+            <!-- Artisanal Starters (6 items) -->
             <h2 class="section-title">Artisanal Starters</h2>
             <div class="menu-grid">
+                <!-- Item 13 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <h3>Truffle Fries</h3>
-                            <p class="tagline">Hand-cut, White Truffle Oil, Parmesan</p>
-                            <span class="click-hint">Click for Specs ➔</span>
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FF6B00?text=Truffle+Fries" alt="Truffle Fries" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Truffle Fries</h3>
+                                <p class="tagline">Hand-cut, White Truffle Oil, Parmesan</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
@@ -102,17 +312,121 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Luxury Sweets -->
-            <h2 class="section-title">Luxury Sweets</h2>
-            <div class="menu-grid">
+                <!-- Item 14 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <h3>24k Gold Lava Cake</h3>
-                            <p class="tagline">Dark Chocolate, Edible Gold, Raspberry</p>
-                            <span class="click-hint">Click for Specs ➔</span>
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FFB800?text=Wagyu+Tartare" alt="Tartare" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Wagyu Beef Tartare</h3>
+                                <p class="tagline">Quail Egg, Capers, Crostini</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Beef, Egg, Capers, Bread</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">5 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Egg</span></div>
+                            <div class="price-tag">$28.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 15 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FF6B00?text=Oysters" alt="Oysters" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Oysters Rockefeller</h3>
+                                <p class="tagline">Spinach, Pernod, Hollandaise</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Oysters, Spinach, Butter</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">12 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Shellfish, Dairy</span></div>
+                            <div class="price-tag">$24.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 16 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FFB800?text=Burrata" alt="Burrata" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Heirloom Burrata</h3>
+                                <p class="tagline">Balsamic Glaze, Basil, Toasted Pine Nuts</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Burrata, Tomatoes, Nuts</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">5 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Nuts</span></div>
+                            <div class="price-tag">$22.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 17 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FF6B00?text=Caviar+Blini" alt="Caviar" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Caviar Blinis</h3>
+                                <p class="tagline">Beluga Caviar, Crème Fraîche, Chives</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Caviar, Cream, Blini</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">5 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy, Fish</span></div>
+                            <div class="price-tag">$45.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 18 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FFB800?text=Bone+Marrow" alt="Bone Marrow" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Roasted Bone Marrow</h3>
+                                <p class="tagline">Parsley Salad, Grilled Sourdough</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Marrow, Bread, Parsley</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">20 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten</span></div>
+                            <div class="price-tag">$26.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luxury Sweets (6 items) -->
+            <h2 class="section-title">Luxury Sweets</h2>
+            <div class="menu-grid">
+                <!-- Item 19 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FF6B00?text=Gold+Lava" alt="Gold Lava" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>24k Gold Lava Cake</h3>
+                                <p class="tagline">Dark Chocolate, Edible Gold, Raspberry</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
@@ -120,6 +434,106 @@
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">20 Mins</span></div>
                             <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Gluten</span></div>
                             <div class="price-tag">$45.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 20 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FFB800?text=Matcha+Mousse" alt="Matcha" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Matcha Green Tea Mousse</h3>
+                                <p class="tagline">Yuzu Gel, Black Sesame Crisp</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Matcha, Yuzu, Sesame</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">10 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Sesame</span></div>
+                            <div class="price-tag">$18.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 21 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FF6B00?text=Saffron+Panna" alt="Panna Cotta" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Saffron Panna Cotta</h3>
+                                <p class="tagline">Pistachio Dust, Rose Water Syrup</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Cream, Saffron, Rose</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">10 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Nuts</span></div>
+                            <div class="price-tag">$20.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 22 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FFB800?text=Tiramisu" alt="Tiramisu" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Deconstructed Tiramisu</h3>
+                                <p class="tagline">Espresso Caviar, Mascarpone Foam</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Espresso, Mascarpone</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Gluten</span></div>
+                            <div class="price-tag">$22.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 23 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FF6B00?text=Ruby+Chocolate" alt="Ruby" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Ruby Chocolate Sphere</h3>
+                                <p class="tagline">Hot Fudge Melt, Vanilla Bean Center</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Ruby Choc, Vanilla, Fudge</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">10 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Soy</span></div>
+                            <div class="price-tag">$28.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 24 -->
+                <div class="menu-card-container">
+                    <div class="menu-card">
+                        <div class="card-face card-front">
+                            <div class="card-image-wrapper"><img src="https://placehold.co/600x400/18140E/FFB800?text=Lemon+Tart" alt="Tart" class="card-image"></div>
+                            <div class="card-front-content">
+                                <h3>Meyer Lemon Tart</h3>
+                                <p class="tagline">Toasted Meringue, Lavender Shortbread</p>
+                                <span class="click-hint">Click for Specs ➔</span>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Lemon, Flour, Egg, Butter</span></div>
+                            <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
+                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy, Egg</span></div>
+                            <div class="price-tag">$19.00</div>
                         </div>
                     </div>
                 </div>

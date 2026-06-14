@@ -1,15 +1,15 @@
 /* 3D Menu Cards CSS */
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 3rem;
   margin-top: 3rem;
 }
 
 .menu-card-container {
-  perspective: 1000px;
+  perspective: 1200px;
   width: 100%;
-  height: 400px;
+  height: 480px; /* Increased height for images */
 }
 
 .menu-card {
@@ -21,13 +21,8 @@
   cursor: pointer;
 }
 
-/* Mouse tracking tilt applies to the whole card element before click */
-.menu-card-container:not(.flipped) .menu-card {
-  /* JS will apply inline transform here for tilt */
-}
-
 .menu-card-container.flipped .menu-card {
-  transform: rotateY(180deg) !important; /* Force flip and override tilt */
+  transform: rotateY(180deg) !important;
 }
 
 .card-face {
@@ -38,35 +33,63 @@
   -webkit-backface-visibility: hidden;
   background: var(--bg-container);
   border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  padding: 2rem;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+  overflow: hidden; /* For images */
 }
 
 .card-front {
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   text-align: center;
 }
 
+.card-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu-card-container:hover .card-image {
+  transform: scale(1.1);
+}
+
+.card-front-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .card-front h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
   color: var(--accent-neon);
 }
 
 .card-front .tagline {
   color: var(--text-muted);
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
 }
 
 .card-front .click-hint {
   margin-top: auto;
-  font-size: 0.9rem;
-  color: rgba(0, 245, 212, 0.5);
+  font-size: 0.85rem;
+  color: var(--accent-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   animation: pulse 2s infinite;
 }
 
@@ -80,47 +103,54 @@
   transform: rotateY(180deg);
   justify-content: flex-start;
   text-align: left;
-  border-color: var(--accent-neon);
-  box-shadow: 0 0 20px rgba(0,245,212,0.15);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 30px rgba(255,107,0,0.2);
+  padding: 2.5rem 2rem;
 }
 
 .card-back h4 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--accent-neon);
-  border-bottom: 1px solid var(--glass-border);
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,107,0,0.3);
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .spec-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.8rem;
-  border-bottom: 1px dashed rgba(255,255,255,0.1);
-  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed rgba(255,255,255,0.05);
+  padding-bottom: 0.5rem;
 }
 
 .spec-label {
   color: var(--text-muted);
   font-weight: 500;
+  font-size: 0.95rem;
 }
 
 .spec-val {
   color: var(--text-main);
   font-weight: 600;
+  font-size: 0.95rem;
+  text-align: right;
+  max-width: 60%;
 }
 
 .price-tag {
   margin-top: auto;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--text-main);
   text-align: center;
+  text-shadow: 0 0 15px rgba(255,184,0,0.3);
 }
 
 .section-title {
-  font-size: 2.5rem;
-  margin: 4rem 0 1rem;
+  font-size: 2.8rem;
+  margin: 5rem 0 2rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid var(--glass-border);
+  color: var(--text-main);
 }
