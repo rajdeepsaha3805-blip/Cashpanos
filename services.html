@@ -23,15 +23,18 @@
             </svg>
             <span class="logo-text">Cashpanos</span>
         </a>
-        <nav>
-            <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Our Story</a></li>
-                <li><a href="services.html" class="active">Interactive Menu</a></li>
-                <li><a href="contact.html">Reservations</a></li>
-            </ul>
-        </nav>
-        <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+        <div class="nav-actions">
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="services.html" class="active">Interactive Menu</a></li>
+                    <li><a href="contact.html">Reservations</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode">☀️</button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+        </div>
     </header>
 
     <main>
@@ -42,6 +45,7 @@
             <!-- Gourmet Meals (6 items) -->
             <h2 class="section-title">Gourmet Meals</h2>
             <div class="menu-grid">
+                <!-- Item 1 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -54,13 +58,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Kobe, Japan</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Wagyu, Truffle, Garlic</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">High Protein</span></div>
                             <div class="price-tag">$125.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 2 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -73,13 +79,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Maine, USA</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Lobster, Saffron, Rice</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">20 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Shellfish, Dairy</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Lean Protein</span></div>
                             <div class="price-tag">$85.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 3 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -92,13 +100,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Gascony, France</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Duck, Cherry, Parsnip</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">25 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">None</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Indulgent</span></div>
                             <div class="price-tag">$65.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 4 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -111,13 +121,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Hokkaido, Japan</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Scallops, Caviar, Cauliflower</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">12 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Shellfish</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Low Calorie</span></div>
                             <div class="price-tag">$55.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 5 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -130,13 +142,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">New Zealand</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Lamb, Pistachio, Mint</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">30 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Nuts</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">High Protein</span></div>
                             <div class="price-tag">$75.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 6 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -149,9 +163,10 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Umbria, Italy</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Flour, Truffle, Butter</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Vegetarian</span></div>
                             <div class="price-tag">$50.00</div>
                         </div>
                     </div>
@@ -161,6 +176,7 @@
             <!-- Signature Smash Burgers (6 items) -->
             <h2 class="section-title">Signature Smash Burgers</h2>
             <div class="menu-grid">
+                <!-- Item 7 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -173,13 +189,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">USA Classic</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Beef, Cheese, Brioche</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">10 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Indulgent</span></div>
                             <div class="price-tag">$18.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 8 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -192,13 +210,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Gourmet Fusion</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Beef, Mushroom, Swiss</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">12 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy, Egg</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Indulgent</span></div>
                             <div class="price-tag">$22.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 9 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -211,13 +231,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Southwest USA</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Beef, Jalapeño, Jack Cheese</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">10 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Indulgent</span></div>
                             <div class="price-tag">$20.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 10 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -230,13 +252,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Texas, USA</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Beef, Bacon, Onion, BBQ</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Heavy Indulgent</span></div>
                             <div class="price-tag">$24.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 11 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -249,13 +273,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">California, USA</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Beyond Meat, Avocado</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">10 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Soy</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Vegan</span></div>
                             <div class="price-tag">$21.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 12 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -268,9 +294,10 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">NYC Fusion</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Wagyu, Foie Gras, Gold</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Indulgent</span></div>
                             <div class="price-tag">$55.00</div>
                         </div>
                     </div>
@@ -280,6 +307,7 @@
             <!-- Artisanal Starters (6 items) -->
             <h2 class="section-title">Artisanal Starters</h2>
             <div class="menu-grid">
+                <!-- Item 13 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -292,13 +320,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Paris, France</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Potatoes, Truffle, Cheese</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">8 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Vegetarian</span></div>
                             <div class="price-tag">$18.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 14 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -311,13 +341,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Paris, France</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Beef, Egg, Capers, Bread</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">5 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Egg</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">High Protein</span></div>
                             <div class="price-tag">$28.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 15 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -330,13 +362,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">New Orleans, USA</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Oysters, Spinach, Butter</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">12 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Shellfish, Dairy</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Mineral Rich</span></div>
                             <div class="price-tag">$24.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 16 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -349,13 +383,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Puglia, Italy</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Burrata, Tomatoes, Nuts</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">5 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Nuts</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Vegetarian</span></div>
                             <div class="price-tag">$22.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 17 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -368,13 +404,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Moscow, Russia</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Caviar, Cream, Blini</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">5 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy, Fish</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Rich Omega-3</span></div>
                             <div class="price-tag">$45.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 18 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -387,9 +425,10 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">London, UK</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Marrow, Bread, Parsley</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">20 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Keto Friendly</span></div>
                             <div class="price-tag">$26.00</div>
                         </div>
                     </div>
@@ -399,6 +438,7 @@
             <!-- Luxury Sweets (6 items) -->
             <h2 class="section-title">Luxury Sweets</h2>
             <div class="menu-grid">
+                <!-- Item 19 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -411,13 +451,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Paris, France</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Chocolate, Gold, Berries</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">20 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Gluten</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Indulgent</span></div>
                             <div class="price-tag">$45.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 20 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -430,13 +472,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Kyoto, Japan</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Matcha, Yuzu, Sesame</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">10 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Sesame</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Antioxidant</span></div>
                             <div class="price-tag">$18.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 21 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -449,13 +493,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Milan, Italy</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Cream, Saffron, Rose</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">10 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Nuts</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Vegetarian</span></div>
                             <div class="price-tag">$20.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 22 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -468,13 +514,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Veneto, Italy</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Espresso, Mascarpone</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Gluten</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Indulgent</span></div>
                             <div class="price-tag">$22.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 23 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -487,13 +535,15 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Zurich, Swiss</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Ruby Choc, Vanilla, Fudge</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">10 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Dairy, Soy</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Indulgent</span></div>
                             <div class="price-tag">$28.00</div>
                         </div>
                     </div>
                 </div>
+                <!-- Item 24 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
@@ -506,9 +556,10 @@
                         </div>
                         <div class="card-face card-back">
                             <h4>Dish Specs</h4>
+                            <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-val">Nice, France</span></div>
                             <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-val">Lemon, Flour, Egg, Butter</span></div>
                             <div class="spec-row"><span class="spec-label">Cook Time</span><span class="spec-val">15 Mins</span></div>
-                            <div class="spec-row"><span class="spec-label">Allergens</span><span class="spec-val">Gluten, Dairy, Egg</span></div>
+                            <div class="spec-row"><span class="spec-label">Health</span><span class="spec-val">Vegetarian</span></div>
                             <div class="price-tag">$19.00</div>
                         </div>
                     </div>
