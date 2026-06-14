@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Menu | Cashpanos</title>
+
+    <!-- Preconnect to image CDN so DNS+TCP is ready before images request -->
+    <link rel="preconnect" href="https://loremflickr.com">
+    <link rel="dns-prefetch" href="https://loremflickr.com">
+
+    <!-- Preload the first 3 above-the-fold card images -->
+    <link rel="preload" as="image" href="https://loremflickr.com/600/400/steak?lock=1">
+    <link rel="preload" as="image" href="https://loremflickr.com/600/400/lobster?lock=2">
+    <link rel="preload" as="image" href="https://loremflickr.com/600/400/duck,food?lock=3">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menu-cards.css">
 </head>
@@ -45,11 +55,11 @@
             <!-- Gourmet Meals (6 items) -->
             <h2 class="section-title">Gourmet Meals</h2>
             <div class="menu-grid">
-                <!-- Item 1 -->
+                <!-- Item 1: eager (above fold) -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/steak?lock=1" alt="Wagyu Filet" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/steak?lock=1" alt="Wagyu Filet" class="card-image" loading="eager" fetchpriority="high"></div>
                             <div class="card-front-content">
                                 <h3>Wagyu Filet Mignon</h3>
                                 <p class="tagline">A5 Japanese Wagyu, Truffle Butter</p>
@@ -66,11 +76,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 2 -->
+                <!-- Item 2: eager -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/lobster?lock=2" alt="Lobster" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/lobster?lock=2" alt="Lobster" class="card-image" loading="eager" fetchpriority="high"></div>
                             <div class="card-front-content">
                                 <h3>Butter Poached Lobster</h3>
                                 <p class="tagline">Maine Lobster, Saffron Risotto</p>
@@ -87,11 +97,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 3 -->
+                <!-- Item 3: eager -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/duck,food?lock=3" alt="Duck" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/duck,food?lock=3" alt="Duck" class="card-image" loading="eager" fetchpriority="high"></div>
                             <div class="card-front-content">
                                 <h3>Crispy Duck Confit</h3>
                                 <p class="tagline">Cherry Reduction, Parsnip Purée</p>
@@ -108,11 +118,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 4 -->
+                <!-- Items 4–6: lazy -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/scallops?lock=4" alt="Scallops" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/scallops?lock=4" alt="Scallops" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Seared Diver Scallops</h3>
                                 <p class="tagline">Cauliflower Silk, Caviar</p>
@@ -129,11 +139,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 5 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/lamb,food?lock=5" alt="Lamb" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/lamb,food?lock=5" alt="Lamb" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Herb-Crusted Lamb</h3>
                                 <p class="tagline">Pistachio Crust, Mint Demi-Glace</p>
@@ -150,11 +159,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 6 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/pasta?lock=6" alt="Pasta" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/pasta?lock=6" alt="Pasta" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Black Truffle Linguine</h3>
                                 <p class="tagline">Handmade Pasta, Shaved Perigord Truffle</p>
@@ -173,14 +181,13 @@
                 </div>
             </div>
 
-            <!-- Signature Smash Burgers (6 items) -->
+            <!-- Signature Smash Burgers (6 items) — all lazy -->
             <h2 class="section-title">Signature Smash Burgers</h2>
             <div class="menu-grid">
-                <!-- Item 7 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burger?lock=7" alt="Classic Smash" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burger?lock=7" alt="Classic Smash" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>The Classic Smash</h3>
                                 <p class="tagline">Double Patty, American Cheese, House Sauce</p>
@@ -197,11 +204,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 8 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burger?lock=8" alt="Truffle Burger" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burger?lock=8" alt="Truffle Burger" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Truffle Mushroom Smash</h3>
                                 <p class="tagline">Swiss Cheese, Roasted Mushrooms, Truffle Aioli</p>
@@ -218,11 +224,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 9 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burger?lock=9" alt="Spicy Smash" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burger?lock=9" alt="Spicy Smash" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Inferno Smash</h3>
                                 <p class="tagline">Pepper Jack, Jalapeño Jam, Spicy Mayo</p>
@@ -239,11 +244,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 10 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burger?lock=10" alt="BBQ Burger" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burger?lock=10" alt="BBQ Burger" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Bacon Bourbon BBQ</h3>
                                 <p class="tagline">Thick Bacon, Onion Rings, Bourbon BBQ</p>
@@ -260,11 +264,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 11 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burger?lock=11" alt="Vegan Smash" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burger?lock=11" alt="Vegan Smash" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Beyond Neon Smash</h3>
                                 <p class="tagline">Plant-Based Patty, Vegan Cheese, Avocado</p>
@@ -281,11 +284,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 12 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burger?lock=12" alt="Wagyu Smash" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burger?lock=12" alt="Wagyu Smash" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>The Billionaire Smash</h3>
                                 <p class="tagline">Wagyu Blend, Foie Gras, Gold Flake</p>
@@ -304,14 +306,13 @@
                 </div>
             </div>
 
-            <!-- Artisanal Starters (6 items) -->
+            <!-- Artisanal Starters (6 items) — all lazy -->
             <h2 class="section-title">Artisanal Starters</h2>
             <div class="menu-grid">
-                <!-- Item 13 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/frenchfries?lock=13" alt="Truffle Fries" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/frenchfries?lock=13" alt="Truffle Fries" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Truffle Fries</h3>
                                 <p class="tagline">Hand-cut, White Truffle Oil, Parmesan</p>
@@ -328,11 +329,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 14 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/tartare?lock=14" alt="Tartare" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/tartare?lock=14" alt="Tartare" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Wagyu Beef Tartare</h3>
                                 <p class="tagline">Quail Egg, Capers, Crostini</p>
@@ -349,11 +349,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 15 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/oysters?lock=15" alt="Oysters" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/oysters?lock=15" alt="Oysters" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Oysters Rockefeller</h3>
                                 <p class="tagline">Spinach, Pernod, Hollandaise</p>
@@ -370,11 +369,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 16 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burrata?lock=16" alt="Burrata" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/burrata?lock=16" alt="Burrata" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Heirloom Burrata</h3>
                                 <p class="tagline">Balsamic Glaze, Basil, Toasted Pine Nuts</p>
@@ -391,11 +389,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 17 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/caviar?lock=17" alt="Caviar" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/caviar?lock=17" alt="Caviar" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Caviar Blinis</h3>
                                 <p class="tagline">Beluga Caviar, Crème Fraîche, Chives</p>
@@ -412,11 +409,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 18 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/bone,marrow?lock=18" alt="Bone Marrow" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/bone,marrow?lock=18" alt="Bone Marrow" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Roasted Bone Marrow</h3>
                                 <p class="tagline">Parsley Salad, Grilled Sourdough</p>
@@ -435,14 +431,13 @@
                 </div>
             </div>
 
-            <!-- Luxury Sweets (6 items) -->
+            <!-- Luxury Sweets (6 items) — all lazy -->
             <h2 class="section-title">Luxury Sweets</h2>
             <div class="menu-grid">
-                <!-- Item 19 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/cake,chocolate?lock=19" alt="Gold Lava" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/cake,chocolate?lock=19" alt="Gold Lava" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>24k Gold Lava Cake</h3>
                                 <p class="tagline">Dark Chocolate, Edible Gold, Raspberry</p>
@@ -459,11 +454,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 20 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/matcha,dessert?lock=20" alt="Matcha" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/matcha,dessert?lock=20" alt="Matcha" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Matcha Green Tea Mousse</h3>
                                 <p class="tagline">Yuzu Gel, Black Sesame Crisp</p>
@@ -480,11 +474,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 21 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/pannacotta?lock=21" alt="Panna Cotta" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/pannacotta?lock=21" alt="Panna Cotta" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Saffron Panna Cotta</h3>
                                 <p class="tagline">Pistachio Dust, Rose Water Syrup</p>
@@ -501,11 +494,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 22 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/tiramisu?lock=22" alt="Tiramisu" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/tiramisu?lock=22" alt="Tiramisu" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Deconstructed Tiramisu</h3>
                                 <p class="tagline">Espresso Caviar, Mascarpone Foam</p>
@@ -522,11 +514,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 23 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/chocolate,dessert?lock=23" alt="Ruby" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/chocolate,dessert?lock=23" alt="Ruby" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Ruby Chocolate Sphere</h3>
                                 <p class="tagline">Hot Fudge Melt, Vanilla Bean Center</p>
@@ -543,11 +534,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Item 24 -->
                 <div class="menu-card-container">
                     <div class="menu-card">
                         <div class="card-face card-front">
-                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/lemontart?lock=24" alt="Tart" class="card-image"></div>
+                            <div class="card-image-wrapper"><img src="https://loremflickr.com/600/400/lemontart?lock=24" alt="Tart" class="card-image" loading="lazy"></div>
                             <div class="card-front-content">
                                 <h3>Meyer Lemon Tart</h3>
                                 <p class="tagline">Toasted Meringue, Lavender Shortbread</p>
@@ -565,11 +555,12 @@
                     </div>
                 </div>
             </div>
-            
+
         </section>
     </main>
 
-    <script src="js/main.js"></script>
-    <script src="js/flip-card.js"></script>
+    <!-- defer keeps scripts non-blocking; page renders before JS executes -->
+    <script src="js/main.js" defer></script>
+    <script src="js/flip-card.js" defer></script>
 </body>
 </html>
